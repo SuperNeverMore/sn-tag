@@ -1,0 +1,22 @@
+@import url("~sn-theme/src/index.less");
+.@{prefix}tag {
+  display: inline-block;
+  line-height: 20px;
+  height: 22px;
+  padding: 0 8px;
+  border-radius: @border-radius;
+  border: 1px solid @@success;
+  background: @@success;
+  -webkit-transition: all .3s cubic-bezier(.215,.61,.355,1);
+  transition: all .3s cubic-bezier(.215,.61,.355,1);
+  opacity: 1;
+  margin-right: 8px;
+  cursor: pointer;
+  white-space: nowrap;
+  &:hover {
+    .color-hover(@@success)
+  }
+  .snfont.sn-close {
+    font-size:12px;
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "name": "test",
+  "version": "1.0.0",
+  "description": "A vue project.",
+  "private": false,
+  "keywords": [],
+  "scripts": {
+    "dev": "cooking watch -p",
+    "build": "cooking build -p",
+    "deploy": "cooking build --no-color",
+    "test": "cooking test karma start --single-run"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "babel-polyfill": "*",
+    "sn-theme": "^0.1.4",
+    "vue": "^2.5.9"
+  },
+  "devDependencies": {
+    "babel-core": "^6.0.0",
+    "babel-loader": "^6.0.0",
+    "babel-plugin-transform-runtime": "^6.0.0",
+    "babel-preset-es2015": "^6.0.0",
+    "babel-preset-stage-0": "^6.0.0",
+    "babel-preset-stage-2": "^6.0.0",
+    "cooking": "^1.0.0",
+    "cooking-autoprefixer": "*",
+    "cooking-less": "*",
+    "cooking-lint": "*",
+    "cooking-vue2": "*",
+    "css-loader": "^0.24.0",
+    "extract-text-webpack-plugin": "^2.0.0-beta",
+    "file-loader": "^0.9.0",
+    "html-loader": "^0.4.3",
+    "html-webpack-plugin": "^2.9.0",
+    "json-loader": "^0.5.4",
+    "postcss": "^5.1.0",
+    "postcss-loader": "^0.11.1",
+    "style-loader": "^0.13.1",
+    "url-loader": "^0.5.7",
+    "vue-template-compiler": "^2.5.9",
+    "webpack": "^2.1.0-beta",
+    "webpack-dev-server": "^2.9.7"
+  }
+}
