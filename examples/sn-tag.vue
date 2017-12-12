@@ -1,6 +1,6 @@
 <template>
   <div class="demo">
-    <Demo closable :clickEvt="clickFun">tag1</Demo>
+    <Demo closable :tagClickEvt="tagClick" :iconClickEvt="clickFun">tag1</Demo>
     <Demo :closable="false">tag2</Demo>
     <Demo :closable="false" type="danger">tag按钮</Demo>
     <Demo :closable="false" type="info">tag按钮</Demo>
@@ -20,6 +20,9 @@
     methods: {
       clickFun() {
         alert('delete');
+      },
+      tagClick() {
+        alert('tag-click');
       }
     }
   };

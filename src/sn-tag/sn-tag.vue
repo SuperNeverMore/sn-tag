@@ -1,6 +1,9 @@
 <template>
     <transition :name="openTransition ? '' : 'sn-fade-enter'">
-        <span class="sn-tag" :class="type ? 'sn-tag--'+type:''">
+        <span class="sn-tag"
+              :class="type ? 'sn-tag--'+type:''"
+              @click = "clickFun"
+        >
             <slot></slot>
             <i class="snfont sn-close"
                v-if="closable" @click="closeCallBack"
@@ -26,14 +29,25 @@
                 type: Boolean,
                 default: false
             },
-            clickEvt: {
+            iconClickEvt: {
+                type: Function,
+                default: ()=>{}
+            },
+            tagClickEvt: {
                 type: Function,
                 default: ()=>{}
             }
         },
         methods: {
-            closeCallBack() {
-                this.clickEvt();
+            closeCallBack(e) {
+                e.stopPropagation();
+                e.preventDefault();
+                this.iconClickEvt();
+            },
+            clickFun(e) {
+                e.stopPropagation();
+                e.preventDefault();
+                this.tagClickEvt();
             }
         }
     };
