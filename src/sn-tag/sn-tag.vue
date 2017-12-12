@@ -1,8 +1,6 @@
 <template>
     <transition :name="openTransition ? '' : 'sn-fade-enter'">
-        <span
-                class="sn-tag"
-        >
+        <span class="sn-tag" :class="type ? 'sn-tag--'+type:''">
             <slot></slot>
             <i class="snfont sn-close"
                v-if="closable" @click="closeCallBack"
@@ -19,6 +17,10 @@
             openTransition: {
                 type: Boolean,
                 default: true
+            },
+            type: {
+                type: String,
+                default: ''
             },
             closable: {
                 type: Boolean,
