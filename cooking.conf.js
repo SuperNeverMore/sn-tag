@@ -28,6 +28,7 @@ cooking.set({
   static: true,
   extractCSS: '[name].[contenthash:7].css',
   alias: {
+    'vue$': 'vue/dist/vue.esm.js',
     'src': path.join(__dirname, 'src')
   },
   extends: ['vue2', 'lint', 'less', 'autoprefixer']
